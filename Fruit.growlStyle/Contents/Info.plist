@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Fruit</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>Germany</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Notification Styles inspired by displays of a particular fruit company</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.Growl.WebKit.Fruit</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>CFBundlePackageType</key>
+	<string>GWKS</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>GRRR</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CSResourcesFileMapped</key>
+	<string>yes</string>
+	<key>GrowlPluginAuthor</key>
+	<string>Matthias Kretschmann</string>
+	<key>GrowlHasShadow</key>
+	<false/>
+	<key>GrowlPaddingX</key>
+	<real>0</real>
+	<key>GrowlPaddingY</key>
+	<real>0</real>
+</dict>
+</plist>
