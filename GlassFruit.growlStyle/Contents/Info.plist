@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>Fruit Glass</string>
+	<string>GlassFruit</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>Germany</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Notification Styles inspired by displays of a particular fruit company</string>
+	<string>Notification Style inspired by displays of a particular fruit company</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Growl.WebKit.Fruit</string>
+	<string>com.Growl.WebKit.GlassFruit</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>CFBundlePackageType</key>

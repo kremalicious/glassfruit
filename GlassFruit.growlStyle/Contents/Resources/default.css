@@ -1,4 +1,4 @@
-/* Fruit Glass is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA. */
+/* GlassFruit is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA. */
 
 body { word-wrap: break-word; }
 
@@ -9,10 +9,15 @@ body { word-wrap: break-word; }
 	color: #fff;
 	font: 12px/1.5 "Lucida Sans","Lucida Grande", Lucida, sans;
 	padding: 8px;
-	padding-bottom: 9px;
-	box-shadow: 0px 1px 9px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.2);
+	box-shadow: 
+		0px 1px 9px rgba(0,0,0,0.8), 
+		inset 0 1px 0 rgba(255,255,255,0.2), 
+		inset 0 -1px 0 rgba(255,255,255,0.1), 
+		inset 1px 0 0 rgba(255,255,255,0.1),
+		inset -1px 0 0 rgba(255,255,255,0.1);
 	position: relative;
 	-webkit-transition: all 0.2s linear;
+	-webkit-animation: popItIn .3s ease-in-out 0s;
 }
 
 /*pseudo elements*/
@@ -24,15 +29,6 @@ body { word-wrap: break-word; }
 	left: 0;
 	top: 0;
 }
-
-	/* glossy shine */
-	.notification:before {
-		position: absolute;
-		z-index: 4;
-		border-radius: 5px;
-		background: -webkit-linear-gradient(-25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%);
-		-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
-	}
 	
 	/*logo*/
 	.notification:after {
@@ -42,7 +38,7 @@ body { word-wrap: break-word; }
 		border-radius: 50%;
 		background-color: #999;
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.2) 10%, rgba(0,0,0,.7) 55%,rgba(0,0,0,.3) 100%);
-		left: 47%;
+		left: 49%;
 		top: auto;
 		bottom: 3px;
 	}
@@ -51,10 +47,24 @@ body { word-wrap: break-word; }
 		background-color: red;
 	}
 
+/* glossy shine */
+.gloss {
+	position: absolute;
+	width: 105%;
+	height: 100%;
+	left: -9px;
+	top: -9px;
+	z-index: 4;
+	border-radius: 5px;
+	background: -webkit-linear-gradient(25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%) no-repeat;
+	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
+	-webkit-animation: fuckYeahGloss .5s ease-in-out 0s;
+}
 
 /*display area*/
 .notification > div {
-	background: -webkit-linear-gradient(top, rgba(38,38,38,1) 0%,rgba(70,70,70,1) 100%);
+	background-color: #666;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
 	padding: 6px;
 	border: 1px solid #000;
 	box-shadow: 
@@ -69,15 +79,24 @@ body { word-wrap: break-word; }
 	/*display bottom glow*/
 	.notification > div:before {
 		position: absolute;
-		background: -webkit-radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.05) 50%, rgba(125,185,232,0) 100%);
+		background: -webkit-radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.15) 50%, rgba(125,185,232,0) 100%);
 	}
 	
 	#emergency.notification > div:before {
 		background: -webkit-radial-gradient(bottom, ellipse cover, rgba(135, 0, 0, .45) 0%, rgba(135, 0, 0, .2) 50%, rgba(135, 0, 0, 0) 100%);
 	}
 
+.notification:hover {
+	box-shadow: 
+		0px 1px 15px rgba(0,0,0,0.9), 
+		inset 0 1px 0 rgba(255,255,255,0.25), 
+		inset 0 -1px 0 rgba(255,255,255,0.15), 
+		inset 1px 0 0 rgba(255,255,255,0.15),
+		inset -1px 0 0 rgba(255,255,255,0.15);
+}
+
 .notification:hover > div {
-	background: -webkit-linear-gradient(top, rgba(38,38,38,1) 0%,rgba(80,80,80,1) 100%);
+	background-color: #777;
 }
 
 .icon {
@@ -113,10 +132,10 @@ body { word-wrap: break-word; }
 }
 
 .title {
-	font-size: 12px;
+	font-size: 13px;
 	margin: 0 0 2px 0;
 	padding: 0 0 0 48px;
-	color: #ddd;
+	color: #fff;
 	text-shadow: 0 1px 0 #000;
 	-webkit-transition: all 0.2s linear;
 	position: relative;
@@ -131,16 +150,27 @@ body { word-wrap: break-word; }
 	text-shadow: 0 1px 0 rgba(255,255,255,0.1);
 }
 
-@-webkit-keyframes flash {
-  from {
-    -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.3);
+
+/* Animations */
+
+@-webkit-keyframes popItIn {
+  0% {
+	top: -100px;
+	opacity: 0;
   }
-  50% {
-  	-webkit-box-shadow: 0 0 15px rgba(255,255,255,0.6);
+  100% { 
+   	top: 0;
+   	opacity: 1;
   }
-  to { 
-    -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.3);
-  }
+}
+
+@-webkit-keyframes fuckYeahGloss {
+	0% { 
+		background-position: 0 -100px;
+	}
+	100% { 
+		background-position: 0 0;
+	}
 }
 
 @-webkit-keyframes pulse {
