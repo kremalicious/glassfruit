@@ -1,0 +1,126 @@
+/*
+ * HS Responsive
+ * The Grid Framework
+ * http://kremalicious.github.com/hsresponsive
+ * 
+ * v1.0
+ *
+ * Copyright 2012, Daniel Ackermann / Matthias Kretschmann
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+
+/* ============================================================== */
+/*   Grid System */
+/*  ============================================================== */
+
+/* apply a natural box layout model to all elements
+   http://paulirish.com/2012/box-sizing-border-box-ftw/  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+/*   320px and up */
+/*  ============================================================== */
+
+.container {
+	padding: 0 2%; 		/* always 20px/1000px padding on left & right */
+	width: 100%;
+	margin: 1% auto; }
+
+.col1, .col2, .col3, .col4, .col5, .col6 {
+	width: 100%;
+	margin-left: 0; }
+
+/* clear trick */
+.container:before, .row:before, 
+.container:after, .row:after { display: table; content: ""; }
+.container:after, .row:after { clear: both; }
+.container, .row { *zoom: 1; }
+
+/* Responsive Media */
+img, svg, video, audio, embed, object {
+	max-width: 100%;	/* never wider as containing column */
+	height: auto;		/* proportional scaling */
+	margin: 0 auto;		/* center in column */
+	display: block;		/* needed for centering */
+}
+
+
+/*   480px and up */
+/*  ============================================================== */
+@media only screen and (min-width: 480px) {
+	
+	.grid2-col1, .grid2-col2 {
+		float: left;
+		margin-left: 2%; }
+	
+	.grid2-col1:first-child, 
+	.grid2-col2 { margin-left: 0; }
+	
+	/* needed double definition so 
+	   IE8 won't ignore the above grid styles */
+	.grid2-col1:nth-child(2n+1) { margin-left: 0; }
+	
+	.grid2-col1 { width: 49%; }		/* 245px/500px */
+	.grid2-col2 { 
+		width: 100%; 
+		margin-left: 0; }
+	
+}
+
+
+/*   768px and up */
+/*  ============================================================== */
+@media only screen and (min-width: 768px) {
+	
+	.row {
+	    max-width: 1000px;		/* fluid til 1000px max */
+	    margin: 0 auto;
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	
+	.col1, 
+	.col2, 
+	.col3, 
+	.col4, 
+	.col5, 
+	.col6,
+	.grid2-col2,
+	.grid2-col1:first-child {
+		float: left;
+		margin-left: 2%; }
+	
+	/* needed double definition so 
+	   IE8 won't ignore the above grid styles */
+	.grid2-col1:nth-child(1n+1) {
+		float: left;
+		margin-left: 2%; }
+	
+	.col1:first-child, 
+	.col2:first-child, 
+	.col3:first-child, 
+	.col4:first-child, 
+	.col5:first-child, 
+	.col6 { margin-left: 0; }
+
+	.col1 { width: 15%; }		/* 150px/1000px */
+	.col2 { width: 32%; }		/* 320px/1000px */
+	.col3 { width: 49%; }		/* 490px/1000px */
+	.col4 { width: 66%; }		/* 660px/1000px */
+	.col5 { width: 83%; }		/* 830px/1000px */
+	.col6 { width: 100%; }		/* 1000px/1000px */
+	
+}
+
+
+/*   1000px and up  */
+/*  ============================================================== */
+@media only screen and (min-width: 1000px) {
+	
+	
+	
+
+}

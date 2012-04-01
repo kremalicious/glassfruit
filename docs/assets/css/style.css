@@ -1,0 +1,373 @@
+
+html {
+	font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+	background: #eef0f1 url(../img/texture.png) repeat left top;
+	width: 100%; }
+
+body {
+	font-size: 13px; line-height: 1.231;
+}
+
+body, select, input, textarea {
+  color: #5e747d;
+  font: 16px/20px 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased; }
+
+/*Headings*/
+h1, h2, h3, h4 {
+	font-size: 1.7em;
+	line-height: 1em;
+	margin-bottom: 1em;
+	margin-top: 0;
+	font-family: 'Voltaire', sans-serif;
+	font-weight: 400;
+	color: rgba(94, 116, 125, .5)
+}
+
+/*Links */
+a {
+	color: #247562;
+	text-decoration: none;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+  
+@font-face {
+    font-family: 'iconSweetsRegular';
+    src: url('../fonts/iconsweets-webfont.eot');
+    src: url('../fonts/iconsweets-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/iconsweets-webfont.woff') format('woff'),
+         url('../fonts/iconsweets-webfont.ttf') format('truetype'),
+         url('../fonts/iconsweets-webfont.svg#iconSweetsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+	font-family: 'iconSweetsRegular';
+	font-weight: normal;
+	font-style: normal;
+}
+
+img {
+	margin-bottom: 1em;
+}
+
+.btn {
+	display: block;
+	padding: .5em 1em .5em .1em;
+	margin-bottom: 1em;
+	line-height: 1.8em;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	background-color: #247562;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0)));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+	border: 1px solid #1a574a;
+	border-radius: 5px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f;
+	-webkit-transition: all .3s ease-in-out;
+}
+
+	.btn .icon {
+		font-size: 2em;
+		vertical-align: text-bottom;
+		margin-right: .1em;
+	}
+	
+	aside .btn {
+		width: 100%;
+	}
+
+.btn:hover {
+	background-color: #288470;
+	color: #fff;
+}
+
+.btn:active {
+	top: 1px;
+	-webkit-transition: none;
+	box-shadow: 0px 1px 5px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f, inset 0 2px 5px #0c2923;
+}
+
+/* grid overwrites */
+.container {
+	padding: 0 4%;
+}
+
+.row {
+	margin-bottom: 1em;
+}
+
+article .row,
+aside .row,
+header[role="banner"] {
+	border-bottom: 1px dashed rgba(94, 116, 125, .2);
+	padding: .5em 0;
+}
+
+/*Header*/
+header[role="banner"] {
+	padding-top: 0;
+}
+
+header[role="banner"] h1 {
+	font-size: 3em;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.8), 0 1px 0 #fff;
+	color: rgba(94, 116, 125, .8);
+	position: relative;
+	margin-bottom: 0;
+	margin-top: -.5em;
+	padding-left: 60px;
+	background: transparent url('../img/glassfruit48.png') no-repeat left top;
+}
+
+header[role="banner"] p {
+	border-bottom: 1px dashed rgba(94, 116, 125, .3);
+	margin-top: 1em;
+	padding-bottom: 1em;
+	margin-bottom: 2.5em;
+	font-size: 1.1em;
+}
+
+header[role="banner"] img {
+	border-radius: 5px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.8);
+}
+
+article h1,
+aside h1 {
+	text-align: center;
+}
+
+aside h1 {
+	margin-bottom: 1em;
+}
+
+/*Live Notification Styles*/
+
+.notification { 
+	border: 1px solid rgba(15,15,15,0.4); 
+	border-radius: 5px;
+	background: #131313;
+	color: #fff;
+	font: 12px/1.5 "Lucida Sans","Lucida Grande", Lucida, sans;
+	padding: 8px;
+	box-shadow: 
+		0px 1px 9px rgba(0,0,0,0.8), 
+		inset 0 1px 0 rgba(255,255,255,0.2), 
+		inset 0 -1px 0 rgba(255,255,255,0.1), 
+		inset 1px 0 0 rgba(255,255,255,0.1),
+		inset -1px 0 0 rgba(255,255,255,0.1);
+	position: relative;
+	-webkit-transition: all 0.2s linear;
+	-webkit-animation: popItIn .3s ease-in-out 0s;
+	
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+/*pseudo elements*/
+.notification :before,
+.notification :after,
+.notification:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+	
+	/*logo*/
+	.notification:after {
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: #999;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.2) 10%, rgba(0,0,0,.7) 55%,rgba(0,0,0,.3) 100%);
+		left: 49%;
+		top: auto;
+		bottom: 3px;
+	}
+	
+	#emergency.notification:after {
+		background-color: red;
+	}
+
+/* glossy shine */
+.gloss {
+	position: absolute;
+	width: 105%;
+	height: 100%;
+	left: -9px;
+	top: -9px;
+	z-index: 4;
+	border-radius: 5px;
+	background: -webkit-linear-gradient(25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%) no-repeat;
+	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
+	-webkit-animation: fuckYeahGloss .5s ease-in-out 0s;
+}
+
+/*display area*/
+.notification > div {
+	background-color: #666;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
+	padding: 6px;
+	border: 1px solid #000;
+	box-shadow: 
+		inset 0 1px 0 rgba(255,255,255,0.01),
+		inset 0 -1px 3px rgba(255,255,255,0.1),
+		inset 1px 0 2px rgba(255,255,255,0.05), 
+		inset -1px 0 2px rgba(255,255,255,0.05);
+	position: relative;
+	-webkit-transition: all 0.2s linear;
+}
+	
+	/*display bottom glow*/
+	.notification > div:before {
+		position: absolute;
+		background: -webkit-radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.15) 50%, rgba(125,185,232,0) 100%);
+	}
+	
+	#emergency.notification > div:before {
+		background: -webkit-radial-gradient(bottom, ellipse cover, rgba(135, 0, 0, .45) 0%, rgba(135, 0, 0, .2) 50%, rgba(135, 0, 0, 0) 100%);
+	}
+
+.notification:hover {
+	box-shadow: 
+		0px 1px 15px rgba(0,0,0,0.9), 
+		inset 0 1px 0 rgba(255,255,255,0.25), 
+		inset 0 -1px 0 rgba(255,255,255,0.15), 
+		inset 1px 0 0 rgba(255,255,255,0.15),
+		inset -1px 0 0 rgba(255,255,255,0.15);
+}
+
+.notification:hover > div {
+	background-color: #777;
+}
+
+.notification .icon {
+	float: left;
+	margin: 0 10px 0 0;
+	display: block;
+	text-align: center;
+	line-height: 36px;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background: none !important;
+	border-radius: 4px;
+}
+.notification .icon img{
+	width: 36px;
+	height: 36px;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.title,
+.message,
+.notification .icon {
+	position: relative;
+	z-index: 5;
+}
+
+.title {
+	font-size: 13px;
+	font-family: "Lucida Sans","Lucida Grande", Lucida, sans;
+	font-weight: bold;
+	line-height: 1.4em;
+	margin: 0 0 2px 0;
+	padding: 0 0 0 48px;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+	-webkit-transition: all 0.2s linear;
+	position: relative;
+	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 30%,rgba(0,0,0,.6) 65%,rgba(0,0,0,1) 100%);
+	background-clip: text;
+}
+
+.message {
+	padding: 0 0 0 48px;
+	margin: 0;
+	color: #000;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/*   768px and up */
+/*  ============================================================== */
+@media only screen and (min-width: 768px) {
+
+	h1, h2, h3, h4, .btn, .notification {
+		margin-bottom: 0;
+	}
+	
+	article .row,
+	aside .row,
+	header[role="banner"] {
+		padding: 2em 0;
+	}
+	
+	aside .btn {
+		width: 80%;
+	}
+	
+	article h1,
+	aside h1 {
+		text-align: left;
+	}
+	
+
+}
+
+
+/* Animations */
+
+@-webkit-keyframes popItIn {
+  0% {
+	top: -100px;
+	opacity: 0;
+  }
+  100% { 
+   	top: 0;
+   	opacity: 1;
+  }
+}
+
+@-webkit-keyframes fuckYeahGloss {
+	0% { 
+		background-position: 0 -100px;
+	}
+	100% { 
+		background-position: 0 0;
+	}
+}
+
+@-webkit-keyframes pulse {
+  from {
+  }
+  50% {
+  	-webkit-box-shadow: 0 0 50px rgba(255,255,255,0.5);
+  }
+  to { 
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,0.15);
+  }
+}
