@@ -2,10 +2,11 @@ GlassFruit
 ========
 Growl notification style inspired by displays of a particular fruit company
 
+![](http://kremalicious.com/lab/glassfruit/assets/img/GlassFruit-Banner-github.jpg)
 
 Preview
 ------------
-http://kremalicious.com/glassfruit
+http://kremalicious.com/lab/glassfruit
 
 
 Donate

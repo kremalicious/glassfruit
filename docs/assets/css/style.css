@@ -27,9 +27,19 @@ h1, h2, h3, h4 {
 }
 
 /*Links */
-a {
+a, a:visited {
 	color: #247562;
 	text-decoration: none;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+
+}
+
+a:hover {
+	color: #31a289;
 }
 
 p, ul, ol {
@@ -76,9 +86,12 @@ img {
 	color: #fff;
 	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 	border: 1px solid #1a574a;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f;
+	-moz-box-shadow: 0px 1px 5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f;
 	box-shadow: 0px 1px 5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f;
-	-webkit-transition: all .3s ease-in-out;
 }
 
 	.btn .icon {
@@ -99,6 +112,12 @@ img {
 .btn:active {
 	top: 1px;
 	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0px 1px 5px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f, inset 0 2px 5px #0c2923;
+	-moz-box-shadow: 0px 1px 5px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f, inset 0 2px 5px #0c2923;
 	box-shadow: 0px 1px 5px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.3), inset 0 2px 25px #164a3f, inset 0 2px 5px #0c2923;
 }
 
@@ -143,7 +162,11 @@ header[role="banner"] p {
 }
 
 header[role="banner"] img {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.8);
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.8);
 }
 
@@ -160,21 +183,41 @@ aside h1 {
 
 .notification { 
 	border: 1px solid rgba(15,15,15,0.4); 
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background: #131313;
 	color: #fff;
 	font: 12px/1.5 "Lucida Sans","Lucida Grande", Lucida, sans;
 	padding: 8px;
+	-webkit-box-shadow: 
+			0px 1px 9px rgba(0,0,0,0.8), 
+			inset 0 1px 0 rgba(255,255,255,0.2), 
+			inset 0 -1px 0 rgba(255,255,255,0.1), 
+			inset 1px 0 0 rgba(255,255,255,0.1),
+			inset -1px 0 0 rgba(255,255,255,0.1);
+	-moz-box-shadow: 
+			0px 1px 9px rgba(0,0,0,0.8), 
+			inset 0 1px 0 rgba(255,255,255,0.2), 
+			inset 0 -1px 0 rgba(255,255,255,0.1), 
+			inset 1px 0 0 rgba(255,255,255,0.1),
+			inset -1px 0 0 rgba(255,255,255,0.1);
 	box-shadow: 
-		0px 1px 9px rgba(0,0,0,0.8), 
-		inset 0 1px 0 rgba(255,255,255,0.2), 
-		inset 0 -1px 0 rgba(255,255,255,0.1), 
-		inset 1px 0 0 rgba(255,255,255,0.1),
-		inset -1px 0 0 rgba(255,255,255,0.1);
+			0px 1px 9px rgba(0,0,0,0.8), 
+			inset 0 1px 0 rgba(255,255,255,0.2), 
+			inset 0 -1px 0 rgba(255,255,255,0.1), 
+			inset 1px 0 0 rgba(255,255,255,0.1),
+			inset -1px 0 0 rgba(255,255,255,0.1);
 	position: relative;
 	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	-webkit-animation: popItIn .3s ease-in-out 0s;
-	
+	-moz-animation: popItIn .3s ease-in-out 0s;
+	-ms-animation: popItIn .3s ease-in-out 0s;
+	animation: popItIn .3s ease-in-out 0s;
 	max-width: 400px;
 	margin: 0 auto;
 	margin-bottom: 2em;
@@ -196,6 +239,8 @@ aside h1 {
 		position: absolute;
 		width: 4px;
 		height: 4px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
 		border-radius: 50%;
 		background-color: #999;
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.2) 10%, rgba(0,0,0,.7) 55%,rgba(0,0,0,.3) 100%);
@@ -216,44 +261,93 @@ aside h1 {
 	left: -9px;
 	top: -9px;
 	z-index: 4;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background: -webkit-linear-gradient(25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%) no-repeat;
+	background: -moz-linear-gradient(25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%) no-repeat;
+	background: -o-linear-gradient(25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%) no-repeat;
+	background: -ms-linear-gradient(25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%) no-repeat;
+	background: linear-gradient(25deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0.2) 59%, rgba(255,255,255,0) 100%) no-repeat;
 	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
 	-webkit-animation: fuckYeahGloss .5s ease-in-out 0s;
+	-moz-animation: fuckYeahGloss .5s ease-in-out 0s;
+	-ms-animation: fuckYeahGloss .5s ease-in-out 0s;
+	animation: fuckYeahGloss .5s ease-in-out 0s;
+
 }
 
 /*display area*/
 .notification > div {
 	background-color: #666;
 	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
+	background-image: linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
 	padding: 6px;
 	border: 1px solid #000;
+	-webkit-box-shadow: 
+			inset 0 1px 0 rgba(255,255,255,0.01),
+			inset 0 -1px 3px rgba(255,255,255,0.1),
+			inset 1px 0 2px rgba(255,255,255,0.05), 
+			inset -1px 0 2px rgba(255,255,255,0.05);
+	-moz-box-shadow: 
+			inset 0 1px 0 rgba(255,255,255,0.01),
+			inset 0 -1px 3px rgba(255,255,255,0.1),
+			inset 1px 0 2px rgba(255,255,255,0.05), 
+			inset -1px 0 2px rgba(255,255,255,0.05);
 	box-shadow: 
-		inset 0 1px 0 rgba(255,255,255,0.01),
-		inset 0 -1px 3px rgba(255,255,255,0.1),
-		inset 1px 0 2px rgba(255,255,255,0.05), 
-		inset -1px 0 2px rgba(255,255,255,0.05);
+			inset 0 1px 0 rgba(255,255,255,0.01),
+			inset 0 -1px 3px rgba(255,255,255,0.1),
+			inset 1px 0 2px rgba(255,255,255,0.05), 
+			inset -1px 0 2px rgba(255,255,255,0.05);
 	position: relative;
 	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 	
 	/*display bottom glow*/
 	.notification > div:before {
 		position: absolute;
 		background: -webkit-radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.15) 50%, rgba(125,185,232,0) 100%);
+		background: -moz-radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.15) 50%, rgba(125,185,232,0) 100%);
+		background: -o-radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.15) 50%, rgba(125,185,232,0) 100%);
+		background: -ms-radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.15) 50%, rgba(125,185,232,0) 100%);
+		background: radial-gradient(bottom, ellipse cover, rgba(0, 142, 189, .1) 0%, rgba(125,185,232,.15) 50%, rgba(125,185,232,0) 100%);
+
 	}
 	
 	#emergency.notification > div:before {
 		background: -webkit-radial-gradient(bottom, ellipse cover, rgba(135, 0, 0, .45) 0%, rgba(135, 0, 0, .2) 50%, rgba(135, 0, 0, 0) 100%);
+		background: -moz-radial-gradient(bottom, ellipse cover, rgba(135, 0, 0, .45) 0%, rgba(135, 0, 0, .2) 50%, rgba(135, 0, 0, 0) 100%);
+		background: -o-radial-gradient(bottom, ellipse cover, rgba(135, 0, 0, .45) 0%, rgba(135, 0, 0, .2) 50%, rgba(135, 0, 0, 0) 100%);
+		background: -ms-radial-gradient(bottom, ellipse cover, rgba(135, 0, 0, .45) 0%, rgba(135, 0, 0, .2) 50%, rgba(135, 0, 0, 0) 100%);
+		background: radial-gradient(bottom, ellipse cover, rgba(135, 0, 0, .45) 0%, rgba(135, 0, 0, .2) 50%, rgba(135, 0, 0, 0) 100%);
 	}
 
 .notification:hover {
+	-webkit-box-shadow: 
+			0px 1px 15px rgba(0,0,0,0.9), 
+			inset 0 1px 0 rgba(255,255,255,0.25), 
+			inset 0 -1px 0 rgba(255,255,255,0.15), 
+			inset 1px 0 0 rgba(255,255,255,0.15),
+			inset -1px 0 0 rgba(255,255,255,0.15);
+	-moz-box-shadow: 
+			0px 1px 15px rgba(0,0,0,0.9), 
+			inset 0 1px 0 rgba(255,255,255,0.25), 
+			inset 0 -1px 0 rgba(255,255,255,0.15), 
+			inset 1px 0 0 rgba(255,255,255,0.15),
+			inset -1px 0 0 rgba(255,255,255,0.15);
 	box-shadow: 
-		0px 1px 15px rgba(0,0,0,0.9), 
-		inset 0 1px 0 rgba(255,255,255,0.25), 
-		inset 0 -1px 0 rgba(255,255,255,0.15), 
-		inset 1px 0 0 rgba(255,255,255,0.15),
-		inset -1px 0 0 rgba(255,255,255,0.15);
+			0px 1px 15px rgba(0,0,0,0.9), 
+			inset 0 1px 0 rgba(255,255,255,0.25), 
+			inset 0 -1px 0 rgba(255,255,255,0.15), 
+			inset 1px 0 0 rgba(255,255,255,0.15),
+			inset -1px 0 0 rgba(255,255,255,0.15);
 }
 
 .notification:hover > div {
@@ -272,6 +366,8 @@ aside h1 {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background: none !important;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 .notification .icon img{
@@ -300,8 +396,14 @@ aside h1 {
 	color: #fff;
 	text-shadow: 0 1px 0 #000;
 	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	position: relative;
 	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 30%,rgba(0,0,0,.6) 65%,rgba(0,0,0,1) 100%);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
 	background-clip: text;
 }
 
@@ -315,7 +417,11 @@ aside h1 {
 /*   768px and up */
 /*  ============================================================== */
 @media only screen and (min-width: 768px) {
-
+	
+	.row {
+		max-width: 900px;
+	}
+	
 	h1, h2, h3, h4, .btn, .notification {
 		margin-bottom: 0;
 	}
@@ -334,40 +440,122 @@ aside h1 {
 	aside h1 {
 		text-align: left;
 	}
-	
 
 }
 
 
 /* Animations */
 
-@-webkit-keyframes popItIn {
-  0% {
-	top: -100px;
-	opacity: 0;
-  }
-  100% { 
-   	top: 0;
+@keyframes popItIn {
+ 0% {
+    top: -100px;
+   	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   	filter: alpha(opacity=0);
+   	opacity: 0;
+ }
+ 100% {
+    top: 0;
+   	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   	filter: alpha(opacity=100);
    	opacity: 1;
-  }
+ }
+}
+
+@-moz-keyframes popItIn {
+ 0% {
+   top: -100px;
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+ 100% {
+   top: 0;
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+}
+
+@-webkit-keyframes popItIn {
+ 0% {
+   top: -100px;
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+ 100% {
+   top: 0;
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+}
+
+@-ms-keyframes popItIn {
+ 0% {
+   top: -100px;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+ 100% {
+   top: 0;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+}
+
+@-o-keyframes popItIn {
+ 0% {
+   top: -100px;
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+ 100% {
+   top: 0;
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+}
+
+@keyframes fuckYeahGloss {
+ 0% {
+    background-position: 0 -100px;
+ }
+ 100% {
+    background-position: 0 0;
+ }
+}
+
+@-moz-keyframes fuckYeahGloss {
+ 0% {
+   background-position: 0 -100px;
+ }
+ 100% {
+   background-position: 0 0;
+ }
 }
 
 @-webkit-keyframes fuckYeahGloss {
-	0% { 
-		background-position: 0 -100px;
-	}
-	100% { 
-		background-position: 0 0;
-	}
+ 0% {
+   background-position: 0 -100px;
+ }
+ 100% {
+   background-position: 0 0;
+ }
 }
 
-@-webkit-keyframes pulse {
-  from {
-  }
-  50% {
-  	-webkit-box-shadow: 0 0 50px rgba(255,255,255,0.5);
-  }
-  to { 
-	-webkit-box-shadow: 0 0 20px rgba(255,255,255,0.15);
-  }
+@-ms-keyframes fuckYeahGloss {
+ 0% {
+   background-position: 0 -100px;
+ }
+ 100% {
+   background-position: 0 0;
+ }
+}
+
+@-o-keyframes fuckYeahGloss {
+ 0% {
+   background-position: 0 -100px;
+ }
+ 100% {
+   background-position: 0 0;
+ }
 }

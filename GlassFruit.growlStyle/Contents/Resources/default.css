@@ -172,14 +172,3 @@ body { word-wrap: break-word; }
 		background-position: 0 0;
 	}
 }
-
-@-webkit-keyframes pulse {
-  from {
-  }
-  50% {
-  	-webkit-box-shadow: 0 0 50px rgba(255,255,255,0.5);
-  }
-  to { 
-	-webkit-box-shadow: 0 0 20px rgba(255,255,255,0.15);
-  }
-}
