@@ -48,21 +48,29 @@ p, ul, ol {
 }
   
 @font-face {
-    font-family: 'iconSweetsRegular';
-    src: url('../fonts/iconsweets-webfont.eot');
-    src: url('../fonts/iconsweets-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/iconsweets-webfont.woff') format('woff'),
-         url('../fonts/iconsweets-webfont.ttf') format('truetype'),
-         url('../fonts/iconsweets-webfont.svg#iconSweetsRegular') format('svg');
+    font-family: 'FontAwesome';
+    src: url('../font/fontawesome-webfont.eot');
+    src: url('../font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/fontawesome-webfont.woff') format('woff'),
+         url('../font/fontawesome-webfont.ttf') format('truetype'),
+         url('../font/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-.icon {
-	font-family: 'iconSweetsRegular';
-	font-weight: normal;
-	font-style: normal;
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  margin-right: .5em;
+  vertical-align: middle;
+  font-size: 1.3333333333333333em;
 }
+.icon-download:before             { content: "\f01a"; }
+.icon-heart:before                { content: "\f004"; }
+.icon-github:before               { content: "\f09b"; }
 
 img {
 	margin-bottom: 1em;
